@@ -2,12 +2,12 @@
 
 public class PizzaDeliveryService : IVisitor
 {
-    public void VisitPrivateHome( PrivateHome destination )
+    public void VisitPrivateHome( ICustomer destination )
     {
         Console.WriteLine($"Delivering pizza to {PrivateHome.Name}");
     }
 
-    public void VisttOffice( Office destination )
+    public void VisttOffice( ICustomer destination )
     {
         Console.WriteLine( $"Delivering pizza to {Office.Name}" );
     }

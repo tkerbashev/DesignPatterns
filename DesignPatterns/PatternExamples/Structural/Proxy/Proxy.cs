@@ -4,7 +4,7 @@ internal class Proxy: IPatternExample
 {
     public void Demonstrate( )
     {
-        TVColtroller tvController = new( );
+        TVController tvController = new( );
         var tvRemote = new TVRemote( tvController );
 
         Console.WriteLine( "Testing the remote:" );

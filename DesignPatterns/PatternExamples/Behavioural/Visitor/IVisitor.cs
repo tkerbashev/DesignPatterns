@@ -2,6 +2,6 @@
 
 public interface IVisitor
 {
-    void VisttOffice( Office destination );
-    void VisitPrivateHome( PrivateHome destination );
+    void VisttOffice( ICustomer destination );
+    void VisitPrivateHome( ICustomer destination );
 }

@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.PatternExamples.Structural.Proxy;
 
-public class TVColtroller : ITVController
+public class TVController : ITVController
 {
     public void ChannelDown( )
     {

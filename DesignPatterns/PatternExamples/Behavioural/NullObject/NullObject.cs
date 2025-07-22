@@ -1,10 +1,10 @@
-﻿namespace DesignPatterns.PatternExamples.Enterprise.NullObject;
+﻿namespace DesignPatterns.PatternExamples.Behavioural.NullObject;
 
 internal class NullObject : IPatternExample
 {
     public void Demonstrate( )
     {
-        List<Citizen> citizens = new();
+        List<Citizen> citizens = [];
 
         var leftParty = new LeftWingParty();
         var rightParty = new RightWingParty();

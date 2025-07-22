@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.PatternExamples.Enterprise.NullObject
+﻿namespace DesignPatterns.PatternExamples.Behavioural.NullObject
 {
     internal class RightWingParty : IParty
     {

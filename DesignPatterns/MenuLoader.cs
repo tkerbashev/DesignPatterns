@@ -21,7 +21,7 @@ using DesignPatterns.PatternExamples.Behavioural.State;
 using DesignPatterns.PatternExamples.Behavioural.Strategy;
 using DesignPatterns.PatternExamples.Behavioural.TemplateMethod;
 using DesignPatterns.PatternExamples.Behavioural.Visitor;
-using DesignPatterns.PatternExamples.Enterprise.NullObject;
+using DesignPatterns.PatternExamples.Behavioural.NullObject;
 
 namespace DesignPatterns;
 
@@ -52,7 +52,6 @@ internal class MenuLoader
     private static readonly Lazy<Strategy> _strategy = new( ( ) => new Strategy( ) );
     private static readonly Lazy<TemplateMethod> _templateMethod = new( ( ) => new TemplateMethod( ) );
     private static readonly Lazy<Visitor> _visitor = new( ( ) => new Visitor( ) );
-
     private static readonly Lazy<NullObject> _nullObject = new( ( ) => new NullObject( ) );
 
     public static IMenuItem Load( )
@@ -89,9 +88,9 @@ internal class MenuLoader
         _ = new MenuItem( ) { Text = "Facade", Parent = structural, PatternExample = _facade.Value };
         _ = new MenuItem( ) { Text = "Flyweight", Parent = structural, PatternExample = _flyweight.Value };
         _ = new MenuItem( ) { Text = "Proxy", Parent = structural, PatternExample = _proxy.Value };
+        _ = new MenuItem( ) { Text = "Null Object", Parent = behavioural, PatternExample = _nullObject.Value };
 
         MenuItem enterprise = new( ) { Text = "Enterprise", Parent = designPatternsMenu, Strategy = subMenu };
-        _ = new MenuItem( ) { Text = "Null Object", Parent = enterprise, PatternExample = _nullObject.Value };
         _ = new MenuItem( ) { Text = "Repository", Parent = enterprise };
         _ = new MenuItem( ) { Text = "Unit of Work", Parent = enterprise };
 

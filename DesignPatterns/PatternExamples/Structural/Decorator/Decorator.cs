@@ -10,12 +10,12 @@ internal class Decorator: IPatternExample
         var comeHomeByBus = new ComeHomeByBus( );
         var comeHomeByCar = new ComeHomeByCar( );
 
-        var grosseriesDecorator = new ComeHomeBuyGrosseries( comeHomeByCar );
-        Console.WriteLine( grosseriesDecorator.Describe );
+        var groceriesDecorator = new ComeHomeBuyGroceries( comeHomeByCar );
+        Console.WriteLine( groceriesDecorator.Describe );
 
         Console.WriteLine( );
 
-        var drinksDecorator = new ComeHomeHaveDringWithFriends( comeHomeByBus );
+        var drinksDecorator = new ComeHomeHaveDrinkWithFriends( comeHomeByBus );
         Console.WriteLine( drinksDecorator.Describe );
     }
 }
