@@ -1,6 +1,6 @@
 ﻿using DesignPatterns.PatternExamples;
 
-namespace DesignPatterns;
+namespace DesignPatterns.Menu;
 
 internal interface IMenuItem
 {

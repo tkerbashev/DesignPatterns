@@ -23,7 +23,7 @@ using DesignPatterns.PatternExamples.Behavioural.TemplateMethod;
 using DesignPatterns.PatternExamples.Behavioural.Visitor;
 using DesignPatterns.PatternExamples.Behavioural.NullObject;
 
-namespace DesignPatterns;
+namespace DesignPatterns.Menu;
 
 internal class MenuLoader
 {
@@ -90,9 +90,9 @@ internal class MenuLoader
         _ = new MenuItem( ) { Text = "Proxy", Parent = structural, PatternExample = _proxy.Value };
         _ = new MenuItem( ) { Text = "Null Object", Parent = behavioural, PatternExample = _nullObject.Value };
 
-        MenuItem enterprise = new( ) { Text = "Enterprise", Parent = designPatternsMenu, Strategy = subMenu };
-        _ = new MenuItem( ) { Text = "Repository", Parent = enterprise };
-        _ = new MenuItem( ) { Text = "Unit of Work", Parent = enterprise };
+        MenuItem miscellaneous = new( ) { Text = "Miscellaneous", Parent = designPatternsMenu, Strategy = subMenu };
+        _ = new MenuItem( ) { Text = "Repository", Parent = miscellaneous };
+        _ = new MenuItem( ) { Text = "Unit of Work", Parent = miscellaneous };
 
         return designPatternsMenu;
     }

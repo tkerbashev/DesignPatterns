@@ -1,6 +1,6 @@
 ﻿using DesignPatterns.PatternExamples;
 
-namespace DesignPatterns;
+namespace DesignPatterns.Menu;
 
 internal class MenuItem : IMenuItem
 {
@@ -59,7 +59,7 @@ internal class MenuItem : IMenuItem
         }
     }
 
-    public IMenuItemStrategy Strategy { get; internal set; } = DesignPatterns.PatternExample.Instance;
+    public IMenuItemStrategy Strategy { get; internal set; } = Menu.PatternExample.Instance;
     public void Demonstrate() => Strategy.Demonstrate( this );
 
     public IPatternExample PatternExample { get; internal set; } =  NotImplementedPatternExample.Instance;
