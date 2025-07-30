@@ -22,6 +22,7 @@ using DesignPatterns.PatternExamples.Behavioural.Strategy;
 using DesignPatterns.PatternExamples.Behavioural.TemplateMethod;
 using DesignPatterns.PatternExamples.Behavioural.Visitor;
 using DesignPatterns.PatternExamples.Behavioural.NullObject;
+using DesignPatterns.PatternExamples.Miscellaneous.UnitOfWork;
 
 namespace DesignPatterns.Menu;
 
@@ -53,6 +54,7 @@ internal class MenuLoader
     private static readonly Lazy<TemplateMethod> _templateMethod = new( ( ) => new TemplateMethod( ) );
     private static readonly Lazy<Visitor> _visitor = new( ( ) => new Visitor( ) );
     private static readonly Lazy<NullObject> _nullObject = new( ( ) => new NullObject( ) );
+    private static readonly Lazy<UnitOfWork> _unitOfWork = new( ( ) => new UnitOfWork( ) );
 
     public static IMenuItem Load( )
     {
@@ -92,7 +94,7 @@ internal class MenuLoader
 
         MenuItem miscellaneous = new( ) { Text = "Miscellaneous", Parent = designPatternsMenu, Strategy = subMenu };
         _ = new MenuItem( ) { Text = "Repository", Parent = miscellaneous };
-        _ = new MenuItem( ) { Text = "Unit of Work", Parent = miscellaneous };
+        _ = new MenuItem( ) { Text = "Unit of Work", Parent = miscellaneous, PatternExample = _unitOfWork.Value };
 
         return designPatternsMenu;
     }
