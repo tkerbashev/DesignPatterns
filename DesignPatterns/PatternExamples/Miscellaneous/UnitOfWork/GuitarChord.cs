@@ -21,7 +21,7 @@ namespace DesignPatterns.PatternExamples.Miscellaneous.UnitOfWork
         public void Strum( )
         {
             WriteLine( );
-            if (_fingers.SetEquals( ExpectedFingerPlacements ))
+            if (IsCorrectlyPlayed)
             {
                 WriteLine( $"Playing the chord {Name}. Bravo! It sounds beautiful!" );
             }
@@ -31,6 +31,8 @@ namespace DesignPatterns.PatternExamples.Miscellaneous.UnitOfWork
                 WriteLine( );
             }
         }
+
+        private bool IsCorrectlyPlayed { get => _fingers.SetEquals( ExpectedFingerPlacements ); }
 
     }
 }

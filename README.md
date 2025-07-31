@@ -9,6 +9,7 @@ I've made every effort to come up with original scenarios illustrating each of t
 The application is built using .NET 9 and C# 13, but is compatible with at least .NET 8.
 
 In the Menu folder, you will find the menu structure, created to facilitate the demonstration of each of the pattern examples.
-The actual examples are located in separate folders inside subfolders of the PatternExamples folder, corresponding to the different types of design patterns.
+The actual examples are located in separate folders inside subfolders of the PatternExamples folder.
+Each of them corresponds to the relevant software design pattern.
 In each such folder, there is a brief description of the pattern and the scenario, plus a Mermaid class diagram script.
 Please note that to properly view the Mermaid diagram in Visual Studio, you might need to install the Markdown Editor v2 extension.
